@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+section{
+    min-height: 100vh;
+    background-image: url("images/image3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container{
+    width: 85;
+    margin: auto;
+}
+
+nav{
+    height: 80px;
+}
+
+nav h1{
+    float: left;
+    line-height: 80px;
+    font-size: 35px;
+    color:bisque;
+    cursor: pointer;
+
+}
+
+nav ul{
+    float: right;
+    line-height: 80px;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    padding: 6px 5px;
+}
+nav ul li .active{
+    background-color: aqua;
+}
+
+nav ul li a{
+    color: rgb(30, 210, 81);
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 5PX;
+    padding: 7PX 8PX;
+}
+
+nav ul li a:hover{
+    background-color: aqua;
+    transition: 0.5S ease;
+}
+
+.intro{
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    transform: translateY(25vh);
+}
+
+.intro h1{
+    font-size: 35px;
+    color: rgba(43, 226, 153, 0.868);
+    letter-spacing: 1.5px;
+    font-weight: 800;
+    margin-bottom: 25px;
+}
+
+.intro p{
+    font-size: 25px;
+    color: black;
+    line-height: 1.2;
+    margin-bottom: 50px;
+}
+
+.intro .btn{
+    color:white;
+    padding: 12px 25px;
+    background-color: blue;
+    text-decoration: none;
+    text-transform: uppercase;  
+}
+
+.intro .btn:hover{
+    background-color: aqua;
+    transition: 0.5S ease;
+    font-size: 25px;
+}
