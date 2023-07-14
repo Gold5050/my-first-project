@@ -13,7 +13,7 @@ section{
     min-height: 100vh;
     display: flex;
     flex-direction: flex-start;
-    background: url(image.1.jpg);
+    background: url(bg.1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
