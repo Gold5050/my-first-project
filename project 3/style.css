@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Roboto:ital,wght@0,300;0,400;1,300;1,400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto" sans-serif;
+}
+
+.header{
+    min-height: 100vh;
+    background-image: url(bgi.1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.navbar{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: antiquewhite;
+    align-items: center;
+    padding: 20px 30px;
+    text-transform: uppercase;
+}
+
+.navbar .logo{
+    border-radius: 30px;
+    font-size: 20px;
+    height: 80px;
+    width: 70px;
+}
+
+.toggle-btn{
+    position: absolute;
+    right: 60px;
+    top: 25px;
+    display: flex;
+    flex-direction: column;
+    height: 20px;
+    width: 20px;
+    justify-content: space-between;
+}
+
+.toggle-btn .bar{
+    height: 4px;
+    width: 100%;
+    font-size: 10px;
+    background-color: rgb(245, 239, 230);
+    border-radius: 20px;
+}
+
+.nav-menu ul{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.nav-menu ul li{
+    padding: 5px 10px;
+    list-style: none;
+    cursor: pointer;
+}
+
+.nav-menu ul li a{
+    font-size: 20px;
+    text-decoration: none;
+    color: beige;
+    background-color: rgb(34, 2, 2);
+}
+
+.nav-menu ul li a:hover{
+    color: rgb(202, 11, 11);
+    transition: 0.5s;
+}
+
+.content{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 0px 60px;
+}
+
+.content h1{
+    font-size: 50px;
+    margin-bottom: 10px;
+    color: azure;
+    text-transform: uppercase;
+    width: 100%;
+    padding: 5px 10px;
+}
+
+.content h1 span{
+    color: rgb(134, 15, 15);
+    font-size: 40px;
+}
+
+.content p{
+    font-size: 25px;
+    margin-bottom: 10px; 
+    text-align: center;
+    line-height: 30px;
+}
+
+ .content .button{
+    margin-top: 20px;
+    text-align: center;
+}
+
+
+.content .button a{
+    color: bisque;
+    font-size: 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: inline-block;
+    background-color: rgb(6, 6, 110);
+    border-radius: 20px;
+    padding: 5px 10px;
+    letter-spacing: 1.6px;
+    margin-bottom: 20px;
+}
+
+.content .button a:hover{
+    background-color: rgb(1, 1, 15);
+    color: rgb(244, 121, 12);
+    transition: 0.5s;
+    font-size: 40px;
+}
+
+.content .media-icon{
+    padding: 20px 10px;
+    align-items: center;
+}
+
+.content .media-icon a{
+    font-size: 30px;
+    justify-content: center;
+    padding: 15px;
+    color: azure;
+}
+
+.content .media-icon a:hover{
+    transition: .5s;
+    font-size: 60px
+}
+
+/* this is for mobile view */
+@media only screen and (max-width: 760px){
+    .toggle-btn{
+        display: flex;
+        z-index: 2;
+    }
+
+    .nav-menu ul{
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        padding-right: 0px;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-color: rgb(172, 141, 94);
+        z-index: 1;
+    }
+
+    .nav-menu{
+        display: none;
+        width: 100%;
+    }
+
+    .nav-menu ul li{
+        margin: 10px 0px;
+    }
+
+    .nav-menu ul li a{
+        font-size: 30px;
+    }
+
+    .nav-menu ul li a:hover{
+        background-color: blanchedalmond;
+        color: rgb(112, 174, 230);
+        transition: 0.5;
+    }
+
+    .navbar .logo{
+        font-size: 35px;
+    }
+
+    .content h1{
+        font-size: 25px;
+    }
+
+    .content h1 span{
+        font-size: 25px;
+    }
+
+    .content p{
+        font-size: 20px;
+
+    }
+    .content .button{
+        font-size: 17px;
+        padding: 10px 20px;
+    }
+
+    .nav-menu.active{
+        display: flex;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

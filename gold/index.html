@@ -4,46 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> this is another project</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <section>
-        <header>
-            <a href="">
 
-                <img src="logo.png" alt="this is a logo" width="200px" height="100px">
-            </a>
-            <div class="navigation">
-                <a href="">home</a>
-                <a href="">about</a>
-                <a href="">services</a>
-                <a href="">products</a>
-                <a href="">contact</a>
+    <div class="header">
+        <nav class="navbar">
+                <img src="image 3.jpg" alt="this is a logo" width="70px" height="80px" class="logo">
+                <a href="#" class="toggle-btn">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </a>
+                
+            
+            <div class="nav-menu">
+                <ul>
+                    <li> <a href="">home</a></li>
+                    <li> <a href="">about</a></li>
+                    <li> <a href="">service</a></li>
+                    <li> <a href="">products</a></li>
+                    <li> <a href="">contact</a></li>
+                </ul>
             </div>
-        </header>
+
+        </nav>
+
 
         <div class="content">
-            <div class="info">
-                <h2>Life is beautiful, <br>I love <span>Money</span></h2>
+            <h1>Financial services</h1>
+            <p>Qui voluptas nisi et doloremque omnis et beatae dolor. Quo nisi omnis nam laborum 
+                laborum sit accusamus dolorum ut Quis consectetur ut facilis accusamus sed enim porro et corrupti nihil.
+            </p>
 
-                <p>
-                    Qui voluptas nisi et doloremque omnis et beatae dolor. Quo nisi omnis nam laborum 
-                    laborum sit accusamus dolorum ut Quis consectetur ut facilis accusamus sed enim porro et corrupti nihil.
-                </p>
-                <a href="#" class="info-btn">more information</a>
+            
+        <div class="button">
+            <a href="#" class="info-btn">Join now</a>
+        </div> 
+        
+
+            <div class="media-icons">
+                <a href="#"> <i class="fa-brands fa-facebook"></i></a>
+                <a href="#"> <i class="fa-brands fa-instagram"></i></a>
+                <a href="#"> <i class="fa-brands fa-twitter"></i></a>
+                <a href="#"> <i class="fa-brands fa-linkedin"></i></a>
             </div>
-        </div>
-
-        <div class="media-icons">
-            <a href="#"> <i class="fa-brands fa-facebook"></i></a>
-            <a href="#"> <i class="fa-brands fa-instagram"></i></a>
-            <a href="#"> <i class="fa-brands fa-twitter"></i></a>
-            <a href="#"> <i class="fa-brands fa-linkedin"></i></a>
-
 
         </div>
- 
-    </section>
+
+    </div>
+
+    <script type="text/javascript">
+        const toggleBtn = document.getElementsByClassName("toggle-btn")[0]
+        const navmenu = document.getElementsByClassName("nav-menu")[0]
+
+        toggleBtn.addEventListener("click", () => {
+            navmenu.classList.toggle("active")
+        })
+
+    </script>
+    
+    
 </body>
 </html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nav class</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+     crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <header>
+        <div class="navbar">
+            <div class="logo"><a href="#">Logo</a></div>
+            
+            <ul class="links">
+                <li> <a href="#hero">Home</a> </li>
+                <li> <a href="#about">About us</a> </li>
+                <li> <a href="#service">Our services</a> </li>
+                <li> <a href="#connect">Connect</a> </li>
+            </ul>
+
+            <a href="#" class="action_btn"> Get More info</a>
+            
+            <div class="toggle_btn">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <li><a href="#hero">Home</a> </li>
+            <li> <a href="#about">About us</a> </li>
+            <li> <a href="#service">Our services</a> </li>
+            <li> <a href="#connect">Connect</a> </li>
+
+            <a href="#" class="action_btn"> Get More info</a>
+        </div>
+    </header>
+
+    <div class ="content">
+        <h1>Money is Good</h1>
+        <p>Money is an integral part of our daily lives and plays a crucial role in shaping modern society. It serves as a medium of exchange, a store of value, and a unit of account. 
+            Beyond its physical form, money has evolved into a complex system that governs economies, influences human behavior, and shapes the course of history.</p>
+
+            <div class="button">
+                <a href="#" class="info-btn">join us now</a>
+            </div>
+
+    </div>
+    <script>
+        const toggleBtn = document.querySelector('.toggle_btn')
+        const toggleBtnIcon = document.querySelector('.toggle_btn i')
+        const dropDown = document.querySelector('.dropdown')
+
+        toggleBtn.onclick = function () {
+            dropDown.classList.toggle('open')
+
+            toggleBtnIcon = isOpen
+            ? 'fa fa-xmark'
+            : 'fa fa-bars'
+        }
+    </script>
+
+
+</body>
+</html>

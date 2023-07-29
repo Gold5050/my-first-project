@@ -1,0 +1,174 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+body{ 
+    height: 100vh; 
+    background-color: red; 
+    background-image: url('images/image2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+li{
+    list-style: none;
+    margin: 10px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    padding: 0.2rem;
+}
+
+/* this is the header */
+
+header{
+    position: relative;
+    padding: 0 2rem;
+}
+
+.navbar{
+    width: 100%;
+    height: 60px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo a{
+    font-size: 30px;
+    font-weight: bold;
+}
+.navbar .logo:hover{
+
+}
+
+.navbar .links{
+    display: flex;
+    gap: 20px;
+
+}
+
+.navbar .toogle_btn{
+    color: sandybrown;
+    font-size: 1.6rem;
+    cursor: pointer;
+    display: none;
+}
+
+.action_btn{
+    color: rgb(23, 222, 222);
+    background-color: rgb(2, 51, 35);
+    padding: 10px 5px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.action_btn:hover{
+    background-color: rgb(39, 232, 155);
+    scale: 1.15;
+    color: azure;
+}
+
+.action_btn:active{
+    scale: 1;
+}
+
+.dropdown{
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    width: 300px;
+    background: rgb(146, 141, 141);
+    border-radius: 10px;
+    overflow: hidden;
+    backdrop-filter: blur(20px);
+    height: 0;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown.open{
+    height: 273px;
+}
+
+
+.dropdown li{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.dropdown li a:hover{
+    color: aliceblue;
+}
+
+.dropdown .action_btn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.content{
+    padding: 20px 10px;
+    text-align: center;
+    justify-content: center;
+}
+
+.content h1{
+    color: rgb(172, 107, 9);
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.content p{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.info-btn{
+    background-color: rgb(189, 71, 16);
+    font-size: 25px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    color: bisque;
+}
+
+.info-btn a:hover{
+    background-color: rgb(5, 5, 96);
+
+
+}
+
+
+
+
+
+/* this is mobile view section */
+
+@media(max-width:992px){
+    .navbar .links,
+    .navbar .action_btn{
+        display: none;
+    }
+
+    .navbar .toggle_btn{
+        display: block;
+    }
+
+    .dropdown{
+        display: block;
+    }
+}
+
