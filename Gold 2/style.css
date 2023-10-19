@@ -89,7 +89,7 @@ header{
     right: 2rem;
     top: 60px;
     width: 300px;
-    background: rgb(146, 141, 141);
+    background: rgba(146, 141, 141, 0.21);
     border-radius: 10px;
     overflow: hidden;
     backdrop-filter: blur(20px);
@@ -147,12 +147,7 @@ header{
 
 .info-btn a:hover{
     background-color: rgb(5, 5, 96);
-
-
 }
-
-
-
 
 
 /* this is mobile view section */

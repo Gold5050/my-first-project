@@ -1,0 +1,283 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.main{
+    width: 100%;
+    background: linear-gradient(to top, rgba(0,0,0, 0.4) 50%, rgba(0,0,0,0.5)50%), url(images/bg.1.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.navbar{
+    width: 1200px; 
+    height: 75px;
+    margin: auto;
+}
+
+.icon{
+    width: 200px;
+    float: left;
+    height: 70px;
+}
+
+.logo{
+    color: blanchedalmond;
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    padding-left: 20px;
+    float: left;
+    padding-top: 15px;
+    margin-top: 5px;
+}
+
+.menu{
+    width: 400px;
+    float: left;
+    height: 70px;
+}
+
+ul{
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul li{
+    list-style: none;
+    margin-left: 60px;
+    margin-top: 25px;
+    font-size: 14px;
+}
+
+ul li a{
+    text-decoration: none;
+    color: rgb(240, 240, 241);
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    transition: 0.5s ease-in-out;
+    font-size: 15px;
+}
+
+ul li a:hover{
+    color: blue;
+}
+
+.search{
+    width: 330px;
+    float: left;
+    margin-left: 270px;
+}
+
+.search-it{
+    font-family: 'Courier New', Courier, monospace;
+    width: 200px;
+    height: 40px;
+    background:transparent;
+    border: 1px solid #08d159;
+    margin-top: 15px;
+    color: rgb(245, 239, 239);
+    border-right: none;
+    font-size: 15px;
+    padding: 10px;
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+}
+
+.search-btn{
+    width: 100px;
+    height: 40px;
+    background: #fff7ff;
+    border: 2px solid #fff7ff;
+    margin-top: 10px;
+    color: rgb(4, 99, 80);
+    font-size: 15px;
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+    transition: 0.2s ease;
+}
+
+.search-btn:hover{
+    color: aquamarine;
+}
+
+.search-btn:focus{
+    outline: none;
+}
+
+.content{
+    width: 1200px;
+    height: auto;
+    margin: auto;
+    color: antiquewhite;
+    position: relative;
+}
+
+.content .intro{
+    padding-left: 20px;
+    padding-bottom: 25px;
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 1.2px;
+    line-height: 30px;
+    margin-top: 25px;
+}
+
+.content h1{
+    font-family: 'Times New Roman';
+    font-size: 50px;
+    padding-left: 20px;
+    margin-top: 9%;
+    letter-spacing: 2px;
+}
+
+.content .join{
+    width: 160px;
+    height: 40px;
+    background: aquamarine;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.4s ease;
+    
+}
+
+.content .join a{
+    text-decoration: none;
+    color: rgb(21, 120, 206);
+    transition: 0.3s;
+}
+
+.content .join:hover{
+    background-color: bisque;
+}
+
+.content span{
+    color: aquamarine;
+    font-size: 65px;
+}
+
+.form{
+    width: 250px;
+    height: 350px;
+    background: linear-gradient(to top, rgba(0,0,0, 0.4) 50%, rgba(0,0,0,0.5)50%);
+    position: absolute;
+    top: -20px;
+    left: 850px;
+    transform: translate(0%, -5%);
+    border-radius: 10px;
+    padding: 25px;
+}
+
+.form h2{
+    width: 200px;
+    font-family: 'Times New Roman';
+    text-align: center;
+    color: rgb(11, 19, 178);
+    font-size: 20px;
+    background-color: aliceblue;
+    border-radius: 10px;
+    margin: 2px;
+    padding: 8px;
+}
+
+.form input{
+    width: 150px;
+    height: 25px;
+    background: transparent;
+    border-bottom: 1px solid aquamarine;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    color: bisque;
+    margin-top: 30px;
+    letter-spacing: 1px;
+}
+
+.form input:focus{
+    outline: none;
+}
+
+::placeholder{
+    color: #fff7ff;
+    font-family: 'Times New Roman';
+}
+
+.form .login-btn{
+    height:40px;
+    width: 200px;
+    margin-top: 15px;
+    background: #71eac1;
+    border-radius: 10px;
+    transition: 0.3s ease;
+    cursor: pointer;
+    border: none;
+    color: #fff7ff;
+}
+
+.form .login-btn a{
+    text-decoration: none;
+    color: #2a529b;
+    transition: 0.3s;
+}
+
+.form .login-btn:hover{
+    background-color: antiquewhite;
+}
+
+.form .signup{
+    text-align: center;
+    padding-top: 20px;
+    font-family: 'Times New Roman';
+}
+
+.signup a{
+    text-decoration: none;
+    color: #2a529b;
+}
+
+.form .social{
+    padding-bottom: 10px;
+    padding-top: 15px;
+    font-family: 'Times New Roman';
+    font-weight: bold; 
+    text-align: center;  
+}
+
+.icons{
+    padding-left: 60px;
+    font-size: 20px;
+
+}
+.form .icons a{
+    color: #2a529b;
+    text-decoration: none;
+    transition: 0.3s ease;
+
+}
+
+.icon a:hover{
+    color: #71eac1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

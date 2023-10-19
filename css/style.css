@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier;
+}
+
+h1{ color: blue;
+    font-size: 47px;
+    margin: 20px;
+    text-align: center;
+}
+
+.intro{
+    color: aqua;
+    background-color: black;
+    padding: 20px;
+    border: 5px solid rgba(244, 241, 241, 0.459);
+    margin: 30px;
+    width: 100%;
+    border-radius: 20px;
+}
+
+section{
+    width: 100%;
+    margin: 40px;
+    padding: 20px;
+    color: rgba(8, 226, 226, 0.811);
+    background-color: black;
+    border-radius: 20px;
+}
+
+#about h2{
+    color: rgb(215, 132, 9);
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#service h2{
+    color: rgb(191, 49, 9);
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#product h2{
+    color: rgb(10, 183, 45);
+    text-align: center;
+    text-transform: uppercase;
+}

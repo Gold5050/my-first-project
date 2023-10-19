@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ComeNStay | Accommodation Listing</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <script src="https://kit.fontawesome.com/29e307186d.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+
+    <nav id="navBar" class="navbar-list">
+        <a href="index.html">
+            <img src="images/logo grey.png" class="logo">
+        </a>
+
+        <ul class="nav-links">
+            <li> <a href="#" class="active">Popular Places</a></li>
+            <li> <a href="#">Travel Outside</a></li>
+            <li> <a href="#">Online Packages</a></li>
+        </ul>
+
+        <a href="#" class="register-btn">Register Now</a>
+        <i class="fa-solid fa-bars" onclick="togglebtn()"></i>
+
+    </nav>
+
+
+    <div class="container">
+
+        <div class="list-container">
+
+            <div class="left-col">
+                <p>1,000+ Options</p>
+                <h1>Recommended places in New York, USA</h1>
+                <div class="house">
+                    <div class="house-img">
+                        <img src="images/image-s1.png">
+                    </div>
+
+                    <div class="house-info">
+                        <p>Private Penthouse in New York</p>
+                        <h3>Special Deluxe Room with a Balcony view</h3>
+                        <p>4 Bedroom and Bathroom/ kitchen/ Jacuzzi/ Cinema</p>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <i class="far fa-star"></i>
+
+                        <div class="house-price">
+                            <p>2 Guests</p>
+                            <h3>&#8358;11,955.00/Day</h3>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="house">
+                    <div class="house-img">
+                        <img src="images/image-s2.png">
+                    </div>
+
+                    <div class="house-info">
+                        <p>Luxurious Suite in Paris</p>
+                        <h3>New Generation Interior with Top Notch Furniture</h3>
+                        <p>4 Bedroom/ 2 Big Sitting Room/ High Standard Bathroom/ Jacuzzi </p>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+
+                        <div class="house-price">
+                            <p>2 Guests</p>
+                            <h3>&#8358;13,445.00/Day</h3>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="house">
+                    <div class="house-img">
+                        <img src="images/image-s3.png">
+                    </div>
+
+                    <div class="house-info">
+                        <p>Private Penthouse in France</p>
+                        <h3>Simple Standard Living Room</h3>
+                        <p>4 Bedroom and Bathroom/ kitchen/ Jacuzzi/ Cinema</p>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="far fa-star"></i>
+
+                        <div class="house-price">
+                            <p>2 Guests</p>
+                            <h3>&#8358;9,495.50/Day</h3>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="house">
+                    <div class="house-img">
+                        <img src="images/Ranch.jpg">
+                    </div>
+
+                    <div class="house-info">
+                        <p>The Best Ranch House in Dubia</p>
+                        <h3>Fine Furniture and Spacious Living Room</h3>
+                        <p>3 Bedroom/ 1 Living Room/ Glass Wall</p>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="far fa-star"></i>
+
+                        <div class="house-price">
+                            <p>2 Guests</p>
+                            <h3>&#8358;9,999.00/Day</h3>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="house">
+                    <div class="house-img">
+                        <a href="house.html">
+                            <img src="images/image-s5.png">
+                        </a>
+                    </div>
+
+                    <div class="house-info">
+                        <p>Private Penthouse in New Delhi</p>
+                        <h3>High Standard Roofless Penthouse</h3>
+                        <p>5 Bedroom/ 2 Sitting Room/ Swimming Pool/ Garden</p>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+
+                        <div class="house-price">
+                            <p>2 Guests</p>
+                            <h3>&#8358;
+                                <span>14,875.00/Day</span></h3>
+                        </div>
+                    </div>
+                </div>
+
+                
+            </div>
+
+            <div class="right-col">
+                <div class="sidebar">
+                    <h2>Select Filter</h2>
+                    <h3>Property Type</h3>
+
+                    <div class="filter">
+                        <input type="checkbox"> <p>House</p> <span>(0)</span>
+                    </div>
+
+                    <div class="filter">
+                        <input type="checkbox"> <p>Penthouse</p> <span>(0)</span>
+                    </div>
+
+                    <div class="filter">
+                        <input type="checkbox"> <p>Mall</p> <span>(0)</span>
+                    </div>
+
+                    <div class="filter">
+                        <input type="checkbox"> <p>Villa</p> <span>(0)</span>
+                    </div>
+
+                    <h3>Amenities</h3>
+
+                    <div class="filter">
+                        <input type="checkbox"> <p>Generating Set</p> <span>(0)</span>
+                    </div>
+
+                    <div class="filter">
+                        <input type="checkbox"> <p>Air Conditioner</p> <span>(0)</span>
+                    </div>
+
+                    <div class="filter">
+                        <input type="checkbox"> <p>Wardrobe</p> <span>(0)</span>
+                    </div>
+
+                    <div class="filter">
+                        <input type="checkbox"> <p>WiFi</p> <span>(0)</span>
+                    </div>
+
+                    <div class="filter">
+                        <input type="checkbox"> <p>Washing Machine</p> <span>(0)</span>
+                    </div>
+
+                    <div class="sidebar-link">
+                        <a href="#">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="pagination">
+            <img src="images/arrow.png">
+
+            <span class="current">1</span>
+            <span>2</span>
+            <span>3</span>
+            <span>5</span>
+            <span>&middot;  &middot; &middot; &middot;</span>
+            <span>20</span>
+
+            <img src="images/arrow.png" class="right-arrow">
+        </div>
+
+        <div class="footer">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/onomeblessing4002/"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https//wa.me/+2347088259377"><i class="fa-brands fa-whatsapp"></i></a>
+
+            <hr>
+
+            <p>Copyright &copy; 2023 Onome Blesseing</p>
+        </div>
+    </div>
+
+
+    <script>
+        var navBar = document.getElementById("navBar");
+        function togglebtn(){
+            navBar.classList.toggle("hidemenu");
+        };
+    
+    </script>
+
+
+</body>
+</html>

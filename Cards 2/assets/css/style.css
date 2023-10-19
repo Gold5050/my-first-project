@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap');
+
+:root{
+    --frist-color:hsl(53, 99%, 53%);
+    --tittle-color:hsl(60, 2%, 17%);
+    --text-color: hsl(0, 3%, 21%);
+    --body-color: hsl(47, 57%, 73%);
+    --container-color: hsl(0, 12%, 89%);
+
+
+    --body-font: "Opensans", sans-serif;
+    --h2-font-side: 1.2rem;
+    --small-font-size: .813rem;
+}
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: var(--body-font);
+    background-color: var(--body-color);
+    color: var(--text-color);
+}
+
+image{
+    display: block;
+    max-width: 100%;
+    height: auto;
+
+}
+
+.container{
+    display: grid;
+    place-items: center;
+    margin-inline: 1.5rem;
+    padding-block: 5rem;
+}
+
+.container .card{
+    display: grid;
+    row-gap: 3.5rem;
+}
+
+.article__card{
+    position: relative;
+    overflow: hidden;
+}
+
+.card__img{
+    width: 400px;
+    border-radius: 20px;
+}
+
+.card__info{
+    width: 300px;
+    background-color: var(--container-color);
+    padding-left: 20px;
+    height: 70px;
+    border-radius: 15px;
+    position: relative;
+    left: 0;
+    right: 0;
+    margin-top: 5px;
+    margin-inline: auto;
+    /* opacity: 0; */
+    transition: opacity 1s 1s;
+}
+
+.card__description{
+     font-size: var(--small-font-size);
+     display: block;
+     margin-bottom: .25rem;
+}
+

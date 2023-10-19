@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap" rel="stylesheet">
+
+  </head>
+  <body>
+    
+    <header class="primary-header">
+      <div class="container">
+
+        <div class="nav-wrapper">
+
+              <!-- logo image -->
+          <a href="#"><img src="images/logo.svg" alt="logo"></a>
+
+          <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+            <img class="icon-hamburger" src="images/icon-hamburger.svg" aria-hidden="true">
+            <img class="icon-close" src="images/icon-close.svg" alt=""  aria-hidden="true">
+            <span class="visually-hidden" >Menu</span> 
+          </button>
+          <!-- nav bar -->
+          <nav class="primary-navigation" id="primary-navigation">
+
+            <ul aria-label="Primary" role="list" class="nav-list">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="portfolio.html" target="_blank">Portfolio</a></li>
+              <li><a href="#">Service</a></li>
+              
+              <li><a href="#">Contact</a></li>
+            </ul>
+
+          </nav>
+
+          <button class="button | display-sm-none  display-md-inline-flex" >Get Started</button>
+
+        </div>
+        
+      </div>
+    </header>
+
+
+    <main>
+
+      <!-- section 1 -->
+      <section class="padding-block-900">
+        <div class="container">
+          <div class="even-columns">
+            <div class="flow">
+              <h1 class="fs-primary-heading fw-bold">We bring people together in Ozoro</h1>
+              <p data-width="wide">We give the best tech service and help software teams to plan day-to-day tasks while keeping in touch</p>
+              <button class="button">Check Us Out</button>
+            </div>
+
+            <div>
+              <img src="images/illustration-intro.svg">
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- section 2 -->
+      <section  class="padding-block-900">
+        <div class="container">
+          <div class="even-columns">
+            <div class="flow">
+              <h2 class="fs-secondary-heading fw-bold">Why Us?</h2>
+                <p data-width="wide">At Manage, we manage all of your resources 
+                  and data giving you the best possible outcomes 
+                  in all in all of your projects. With our highly 
+                  technical skills of data anlyst our result is top 
+                  notch.
+                </p>
+            </div>
+
+            <div>
+              <ul class="numbered-items | flow" role="list">
+
+                <!-- list of services -->
+                <li class="flow" style="--flow-spacer: 1em">
+                  <h3 class="fs-600 fw-bold">Track Company Progress</h3>
+                  <p data-width="wide">See how we manage the projects of 
+                    clients, increasing their site productivity 
+                    with our high SEO skills
+                  </p>
+                </li>
+
+                <li class="flow" style="--flow-spacer: 1em">
+                  <h3 class="fs-600 fw-bold">Track Company Progress</h3>
+                  <p data-width="wide">See how we manage the projects of 
+                    clients, increasing their site productivity 
+                    with our high SEO skills
+                  </p>
+                </li>
+
+                <li class="flow" style="--flow-spacer: 1em">
+                  <h3 class="fs-600 fw-bold">Track Company Progress</h3>
+                  <p data-width="wide">See how we manage the projects of 
+                    clients, increasing their site productivity 
+                    with our high SEO skills
+                  </p>
+                </li>
+
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- section 3 -->
+      <section class="carousel | padding-block-700">
+        <h2 class="fs-secondary-heading fw-bold">What Others Say</h2>
+        <!--add carousel items here -->
+
+        <button class="button">Check It Out</button>
+
+      </section>
+
+      <!-- section 4 -->
+      <section class="cta |  padding-block-700   bg-accent-400 text-neutral-100">
+        <div class="even-columns vertical-align-center">
+          <div>
+            <p class="fs-secondary-heading fw-bold">How Our Team Works.</p>
+          </div>
+
+          <div class="justify-self-end">
+            <button class="button" data-type="inverted" >See For Yourself</button>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- footer -->
+    <footer class="bg-neutral-900 text-neutral-100   padding-block-700">
+      <div class="container">
+        <div class="even-columns">
+          <div>
+            <a href="#">  <img src="images/logo.svg" alt="logo">
+              <ul role="list" aria-label="Social links">
+                <li><a aria-label="facebooks" href=""></a></li>
+                <li><a aria-label="instagram" href="#"></a></li>
+                <li><a aria-label="twitter" href="#"></a></li>
+                <li><a aria-label="gitbub" href="#"></a></li>
+                <li><a aria-label="devto" href="#"></a></li>
+              </ul>
+            </a>
+          </div>
+
+          <div class="flow">
+            <nav class="footer-nav">
+              <ul aria-label="Footer" role="list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">FAQs</a></li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="flow">
+            <form action="">
+              <input type="email">
+              <button class="button">Sign Up</button>
+              <p>Copyright 2023. All Rights Reserved.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </footer>
+   
+  </body>
+  <script type="module" src="/main.js"></script>
+</html>
