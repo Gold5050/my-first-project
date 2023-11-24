@@ -1,0 +1,761 @@
+:root {
+  --clr-accent-500: hsl(12, 60%, 40%);
+  --clr-accent-400: hsl(12, 88%, 59%);
+  /* --clr-accent-100: hsl(13, 100%, 96%); */
+  --clr-accent-300: hsl(12, 88%, 75%);
+  --clr-accent-100: hsl(13, 100%, 96%);
+
+
+  
+  --clr-primary-400: hsl(228, 39%, 23%);
+
+  /* --clr-neutral-100: hsl(232, 12%, 13%); */
+  --clr-neutral-900: hsl(232, 12%, 13%);
+
+  --clr-neutral-200: hsl(0, 5%, 24%);
+  --clr-neutral-100: hsl(0 0% 100%);
+
+  --ff-primary: "Be Vietnam Pro", sans-serif;
+
+  --ff-body: var(--ff-primary);
+  --ff-heading: var(--ff-primary);
+
+  --fw-regular: 400;
+  --fw-semi-bold: 500;
+  --fw-bold: 700;
+
+  --fs-300: 0.8125rem;
+  --fs-400: 0.875rem;
+  --fs-500: 0.9375rem;
+  --fs-600: 1rem;
+  --fs-700: 1.875rem;
+  --fs-800: 2.5rem;
+  --fs-900: 3.5rem;
+
+  --fs-body: var(--fs-400);
+  --fs-primary-heading: var(--fs-800);
+  --fs-secondary-heading: var(--fs-700);
+  --fs-nav: var(--fs-500);
+  --fs-button: var(--fs-300);
+
+  /* this is additional */
+  --size-100: .5rem; 
+  --size-200: .5rem; 
+  --size-300: .75rem; 
+  --size-400: 1rem;
+  --size-500: 1.5rem;
+  --size-600: 2rem;
+  --size-700: 3rem;
+  --size-800: 4rem;
+  --size-900: 5rem;
+
+
+}
+
+@media (min-width: 50em) {
+  :root {
+    --fs-body: var(--fs-500);
+    --fs-primary-heading: var(--fs-900);
+    --fs-secondary-heading: var(--fs-800);
+
+    --fs-nav: var(--fs-300);
+  }
+}
+
+/* // https://piccalil.li/blog/a-modern-css-reset */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+/* Set core body defaults  */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+
+
+
+.container{ 
+  --max-width: 1110px;
+  --padding:  1rem;
+
+
+  width: min(var(--max-width), 100% - var(--padding));
+  margin-inline: auto;
+
+}
+
+/* Step1: Work on the footer nav   */
+/* Footer Navigation  */
+
+.footer-nav a{ 
+color: var(--clr-neutral-100);
+text-decoration: none;
+}
+
+.footer-nav a:is(:hover, :focus){  
+  color: var(--clr-accent-400);
+
+}
+/* Step2: Make the footer nav into columns  */
+
+.footer-nav{
+  columns: 2;
+
+  /* Step12: Add a gap here */
+  gap: clamp(var(--size-600), 10vw, var(--size-900));
+}
+
+
+
+
+
+
+/* Step Rearrangeing the footer for mobile screen. */
+
+
+.primary-footer{ 
+  --logo-color: var(--clr-neutral-100);
+
+}
+/* Step 7b: rearrange the footer for mobile screen */
+
+.primary-footer-wrapper  { 
+  display: grid;
+  gap: var(--size-700);
+  grid-template-areas: 
+    "form"
+    "nav"
+    "local-social" ;
+}
+
+
+
+@media (min-width: 50em){ 
+  .primary-footer-wrapper{
+    grid-template-areas: "logo-social nav form" ;
+  }
+
+
+  
+  /* Step11: Copy .primary-footer-logo-social in here */
+  .primary-footer-logo-social{ 
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: var(--size-700);
+ }
+ 
+}
+
+ /* Step 9: Rename the nth-child using the naming in step 8 */
+
+/* OLD NAME .primary-footer-wrapper >:nth-child(1){ 
+  New name is just the new class name
+} */
+/* New name */  
+.primary-footer-logo-social{ 
+  grid-area: "local-social"; 
+
+
+   /* Step 10: Reorganize the logo for the fooler */
+   display: flex;
+   flex-direction: column-reverse;
+   align-items: center;
+   gap: var(--size-700);
+}
+
+/* OLD NAME  .primary-footer-wrapper >:nth-child(2){ 
+  grid-area: nav;
+} */
+
+/* New name */
+.primary-footer-nav { 
+  grid-area: nav;
+}
+
+/* 
+OLD NAME.primary-footer-wrapper >:nth-child(3){ 
+  grid-area: form;
+} */
+
+/* New name */
+.primary-footer-form { 
+  grid-area: form;
+
+  /* Step:17 Space the form group */
+  display: grid;
+  align-content: space-between;
+
+}
+
+
+/* Step: 14 Keep the group */
+input:where([type="text"], [type="email"]){ 
+  border-radius: 100vw; 
+  border: 0;
+  padding: var(--size-300) var(--side-400);
+
+}
+/* Step: 15 Touch the form itself */
+.primary-footer form{ 
+  display: flex;
+  gap: var(--size-400);
+}
+
+
+@media (max-width: 50em){ 
+  .primary-footer-wrapper > * { 
+    margin-inline: auto;
+
+  }
+
+}
+
+
+/* Step3b: Work on the entire Social list and social icons */
+/* Start here */
+.social-list {
+  display: flex;
+  gap: var(--size-600);
+}
+
+.social-icon{ 
+  width: var(--size-600);
+  fill: var(--clr-neutral-100);
+  aspect-ratio: 1;
+}
+
+
+@media (min-width: 50em){ 
+  /* Social list here is for step 7 only */
+    .social-list{
+      display: flex;
+      gap: var(--size-300);
+    }
+
+/* Social icon here is for step 3b only */
+    .social-icon{
+      width: var(--size-500);
+    }
+}
+
+
+.social-list a:is(:hover, :focus) .social-icon{ 
+  fill: var(--clr-accent-400);
+}
+
+
+@media (min-width: 50em){ 
+  .social-icon{ 
+    width: var(--size-500);
+  }
+}
+/* End here */
+
+
+
+
+
+.justify-self-end{ 
+  justify-self: end;
+}
+
+
+.vertical-align-center{ 
+  align-items: center;
+}
+
+
+@media (min-width: 50em){
+  .justify-self-end-md{
+    justify-self: end;
+  }
+}
+
+
+:where(.flow :not(:first-child)){ 
+  margin-top: var(--flow-spacer, 4em);
+}
+
+
+.even-columns{ 
+  display: grid;
+  gap: 1rem;
+}
+
+
+@media (min-width: 50em){ 
+  .even-columns{ 
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+  }
+}
+
+/* General stying for project */
+body{ 
+  font-size: var(--fs-body);
+  font-family: var(--ff-body);
+  color: var(--clr-primary-400);
+}
+
+p:not([class]){ 
+  opacity: 0.7;
+  max-width: 32ch;
+}
+
+p[data-width="wide"]{ 
+  max-width: 42ch;
+}
+
+
+.button{ 
+  display: inline-flex;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 100vmax;
+  padding: 1em 2.5em;
+  border: 0;
+  line-height: 1;
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-button);
+  color: var(--clr-accent-100);
+  background-color: var(--clr-accent-400);
+  box-shadow: 0 1.125em 1em -1em var(--clr-accent-500);
+}
+
+.button:hover, 
+.button:focus-visible{ 
+  background-color: var(--clr-accent-300);
+
+}
+
+.button[data-type="inverted"]{ 
+  background-color: var(--clr-neutral-100);
+  color: var(--clr-accent-400);
+}
+
+/* Style step 13 here */
+.button[data-shadow='none']{ 
+  box-shadow: none;
+
+}
+
+.button[data-type="inverted"]:hover, 
+.button[data-type="inverted"]:focus-visible{ 
+  background-color: var(--clr-neutral-100);
+  color: var(--clr-accent-300);
+  
+}
+
+
+
+/* Navigation Section */
+
+
+.primary-header{ 
+  padding-top: var(--size-700);
+
+}
+
+
+.nav-wrapper{ 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+
+
+.mobile-nav-toggle{ 
+  display: none;
+}
+
+.nav-list{ 
+  font-size: var(--fs-nav);
+}
+
+
+.nav-list{ 
+  display: flex;
+  gap: clamp(var(--size-500), 5vw, var(--size-800));
+
+  font-weight: var(--fw-semi-bold);
+}
+
+
+ .nav-list a{ 
+  text-decoration: none;
+  color: var(--clr-primary-400);
+}
+
+.nav-list a:hover, 
+.nav-list a:focus{ 
+  color: var(--clr-accent-400);
+}
+
+
+.cta{ 
+  position: relative;
+ 
+  isolation: isolate;
+  text-align: center;
+}
+
+
+@media (min-width: 50em){ 
+  .cta{ 
+    text-align: left;
+  }
+}
+
+
+.cta::before{ 
+  content: '';
+  background-image: url("images/bg-tablet-pattern.svg"), 
+  url("images/bg-tablet-pattern.svg");
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  opacity: 0.1;
+  background-position: -15rem -5rem, 80rem -42rem;
+  background-repeat: no-repeat;
+}
+
+
+
+
+
+@media (max-width: 50em){ 
+  .primary-navigation{ 
+    display: none;
+
+    position: absolute; 
+    
+    padding: var(--size-700);
+    inset: 7rem var(--size-400) auto;
+    background: var(--clr-neutral-100);
+    max-width: 25rem;
+    margin-inline: auto;
+    border-radius: var(--size-100);
+    box-shadow: 0 0 .75em rgb(0, 0, 0, 0.5),
+   
+    0 0 1000vmax 0 rgb(0 0 0 / 0.75);
+    
+  }
+
+.primary-header[data-overlay]{
+  content: '';
+   position: absolute; 
+   position: fixed;
+  inset: 0; 
+  background-image: linear-gradient(red, blue);
+
+
+}
+
+  .nav-list{ 
+    display: grid;
+    gap: var(--size-600);
+    text-align: center;
+    font-weight: var(--fw-bold);
+    
+  }
+
+  
+   
+
+  .primary-navigation[data-visible]{ 
+    display: block;
+    position: fixed;
+  }
+
+  .mobile-nav-toggle{ 
+    cursor: pointer; 
+    background: transparent;
+    border: 0; 
+    padding: 0.5em;
+    display: block;
+  }
+  
+  
+  .mobile-nav-toggle .icon-close{ 
+  display: none;
+  }
+  
+}
+
+
+
+/* Step:18 Numbered items */
+/* Numbered Items */
+.numbered-items {
+counter-reset: count;
+width: max-content;
+margin-inline: auto;
+
+
+}
+
+.numbered-items li{ 
+  counter-increment: count;
+
+}
+
+.numbered-items div{ 
+  display: grid;
+  align-items: center;
+  position: relative;   /* Note: only add position here after step 19 */
+  column-gap: var(--size-400);
+  grid-template-columns: min-content 1fr 1fr;
+}
+
+
+
+.numbered-items_body{ 
+  grid-column: 1 / -1;
+}
+
+
+
+
+/* Step:21 Add numbered-items_title here*/
+.numbered-items_title{ 
+  grid-row: 1 / 2;
+  grid-column: 2 / 3;
+  line-height: 1;
+}
+
+
+.numbered-items p{ 
+  grid-column:  1 / -1;
+}
+
+
+
+
+
+/* Step:22 Add numbered-items_title here*/
+.numbered-items div::before, 
+.numbered-items div::after{ 
+  height: 40px;
+}
+
+
+
+
+/* Step:20 make the padding to be 0 var(size500) and add height Numbered items */
+.numbered-items div::before{ 
+  display: flex;
+  align-items: center;
+  content: "0" counter(count);
+  background-color: var(--clr-accent-400);
+  font-weight: var(--fw-bold); 
+  color: var(--clr-neutral-100);
+  padding: 0 var(--size-500);
+  border-radius: 100vw;
+ 
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+}
+
+
+
+/* this is the carousel section done with slifer library */
+.slider {
+  display: flex;
+  list-style: none;
+ gap: var(--size-400);
+}
+
+.slider > * {
+  position: relative;
+  width: 100%;
+  flex: 0 0 auto;
+  background: var(--clr-neutral-200);
+  border-radius: var(--size-300);
+}
+
+.slider img{ 
+  width: var(--size-800);
+  position: absolute;
+  inset: 0;
+  margin-inline: auto;
+  top: -50%;
+  transform: translateY(50%);
+
+}
+
+
+
+
+
+
+
+/* Utility classes */
+/* Add your .visually-hidden here */
+.visually-hidden {
+  position: absolute;
+position: absolute !important;
+width: 1px !important;
+height: 1px !important;
+padding: 0 !important;
+margin: -1px !important;
+overflow: hidden !important;
+clip: rect(0,0,0,0) !important;
+white-space: nowrap !important;
+border: 0 !important;
+}
+
+
+
+
+
+.text-primary-400 {
+  color: var(--clr-primary-400);
+}
+.text-accent-400 {
+  color: var(--clr-accent-400);
+}
+.text-accent-100 {
+  color: var(--clr-accent-100);
+}
+.text-neutral-100 {
+  color: var(--clr-neutral-100);
+}
+.text-neutral-900 {
+  color: var(--clr-neutral-900);
+}
+
+.bg-primary-400 {
+  background-color: var(--clr-primary-400);
+}
+.bg-accent-400 {
+  background-color: var(--clr-accent-400);
+}
+.bg-accent-100 {
+  background-color: var(--clr-accent-100);
+}
+.bg-neutral-100 {
+  background-color: var(--clr-neutral-100);
+}
+.bg-neutral-900 {
+  background-color: var(--clr-neutral-900);
+}
+
+.fw-bold {
+  font-weight: var(--fw-bold);
+}
+.fw-semi-bold {
+  font-weight: var(--fw-semi-bold);
+}
+.fw-regular {
+  font-weight: var(--fw-regular);
+}
+
+.fs-primary-heading {
+  font-size: var(--fs-primary-heading);
+  line-height: 1.2;
+}
+.fs-secondary-heading {
+  font-size: var(--fs-secondary-heading);
+  line-height: 1.1;
+}
+
+.fs-300 {
+  font-size: var(--fs-300);
+}
+.fs-400 {
+  font-size: var(--fs-400);
+}
+.fs-500 {
+  font-size: var(--fs-500);
+}
+.fs-600 {
+  font-size: var(--fs-600);
+}
+
+
+/* add the additional above, before styling the padding block */
+.padding-block-900{ 
+  padding-block: var(--size-900);
+}
+
+.padding-block-700{ 
+  padding-block: var(--size-700);
+}
+
+
+.padding-block-400{ 
+  padding-block: var(--size-400);
+}
+
+.display-sm-none{ 
+  display: none;
+}
+
+
+@media (min-width: 50em){ 
+  .display-md-inline-flex{ 
+    display: inline-flex;
+  }
+}
+
+
